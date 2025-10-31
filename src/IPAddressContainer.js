@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import IPAddress from './IPAddress';
 
 /**
  * IPAddressContainer
@@ -8,12 +9,11 @@ import React from 'react';
  *   call and update component state. The server details will be provided later; the method
  *   is ready to be called once you provide the URL and desired behavior.
  */
-import React from 'react';
 
 // Global XMLHttpRequest instance
 let xhr;
 
-class IPAddressContainer extends React.Component {
+class IPAddressContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -62,14 +62,7 @@ class IPAddressContainer extends React.Component {
 
     return (
       <div className="ip-address-container">
-        <h1>IP Address React App Using AI</h1>
-
-        <div id="ip-display">
-          {loading && <p>Loading IP…</p>}
-          {!loading && ip_address && <p>IP: {ip_address}</p>}
-          {!loading && !ip_address && !error && <p>IP will appear here.</p>}
-          {error && <p className="error">Error: {error}</p>}
-        </div>
+        <IPAddress ip={ip_address} loading={loading} error={error} />
       </div>
     );
   }

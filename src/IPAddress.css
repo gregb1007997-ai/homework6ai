@@ -1,0 +1,15 @@
+/* IPAddress.css - styles for IPAddress component */
+
+.ip-address-component h1 {
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 140px;
+  font-size: 60px;
+  margin: -15px;
+}
+
+.ip-address-component p {
+  font-family: sans-serif;
+  color: #907400;
+  text-align: center;
+}
